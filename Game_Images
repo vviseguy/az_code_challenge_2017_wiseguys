@@ -1,0 +1,71 @@
+void setup () {
+  size(400, 400);
+  };
+
+var tracedots = function(xcord, ycord) {
+  background(20, 200, 40);
+  fill(0, 0, 0);
+  strokeWeight(4);
+  line(xcord + 30, ycord + 350, xcord + 370, ycord + 350);//horrizontal line
+  line(xcord + 200, ycord + 350, xcord + 200, ycord + 150);//vertical line
+  noStroke();
+  ellipse(xcord + 30, ycord + 350, 10, 10);//bottom left dot
+  ellipse(xcord + 200, ycord + 350, 10, 10);//bottom middle dot
+  ellipse(xcord + 370, ycord + 350, 10, 10);//bottom right dot
+  ellipse(xcord + 200, ycord + 200, 10, 10);//middle middle dot
+  ellipse(xcord + 200, ycord + 50, 10, 10);//top middle dot
+  ellipse(xcord + 100, ycord + 150, 10, 10);//diagnal dot
+  //making the pencil
+  stroke(0, 0, 0);
+  strokeWeight(2);
+  fill(100, 50, 0);
+  beginShape();//cone part of pencil
+    vertex(xcord + 200,ycord + 150);
+    vertex(xcord + 224,ycord + 160);
+    vertex(xcord + 222,ycord + 166);
+    vertex(xcord + 217,ycord + 170);
+    vertex(xcord + 212,ycord + 172);
+    vertex(xcord + 200,ycord + 150);
+  endShape();
+  fill(255, 255, 0);
+  //noFill();
+  beginShape();//middle of pencil
+    vertex(xcord + 224, ycord + 160);
+    vertex(xcord + 313, ycord + 270);
+    vertex(xcord + 300, ycord + 280);
+    vertex(xcord + 212, ycord + 172);
+    vertex(xcord + 217,ycord + 170);
+    vertex(xcord + 222,ycord + 166);
+    vertex(xcord + 224,ycord + 160);
+  endShape();
+  fill(255, 0, 0);
+  beginShape();//pencil eraser
+    vertex(xcord + 313, ycord + 270);
+    vertex(xcord + 322, ycord + 281);
+    vertex(xcord + 309, ycord + 290);
+    vertex(xcord + 300, ycord + 280);
+    vertex(xcord + 313, ycord + 270);
+  endShape();
+  fill(0, 0, 0);
+  beginShape();//pencil lead
+    vertex(xcord + 200, ycord + 150);
+    vertex(xcord + 210, ycord + 154);
+    vertex(xcord + 206, ycord + 159);
+    vertex(xcord + 200, ycord + 150);
+  endShape();
+  line(xcord + 217,ycord + 170,xcord + 304,ycord + 277);
+  line(xcord + 221,ycord + 166,xcord + 308,ycord + 273);
+};
+var alphaorder = function(xcord, ycord) {
+  fill(50, 50, 255);
+  strokeWeight(2);
+  rect(xcord + 10, ycord + 10, 35, 35, 3);
+  fill(0, 0, 0);
+  text("C",xcord + 20,ycord + 30, 6);
+};
+void draw(){
+  background(255, 255, 255);
+  stroke(0, 0, 0);
+  //tracedots(0, 0);
+  alphaorder(354, 0);
+}
