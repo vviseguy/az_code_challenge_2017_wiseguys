@@ -1,0 +1,118 @@
+void setup () {
+  size(400, 400);
+};
+var numtrace = function(xcord, ycord) {
+  fill(255, 255, 255);
+  rect(0,0,400,400);
+  fill(0, 0, 0);
+  strokeWeight(10);
+  line(xcord + 30,  ycord + 350, xcord + 370, ycord + 350);//horrizontal line
+  line(xcord + 200, ycord + 350, xcord + 200, ycord + 150);//vertical line
+  noStroke();
+  ellipse(xcord + 30,  ycord + 350, 20, 20);//bottom left dot
+  ellipse(xcord + 200, ycord + 350, 20, 20);//bottom middle dot
+  ellipse(xcord + 370, ycord + 350, 20, 20);//bottom right dot
+  ellipse(xcord + 200, ycord + 200, 20, 20);//middle middle dot
+  ellipse(xcord + 100, ycord + 150, 20, 20);//diagnal dot
+  fill(50, 50, 50);
+  ellipse(xcord + 200, ycord + 50,  20, 20);//top middle dot
+  //making the pencil
+  stroke(0, 0, 0);
+  strokeWeight(2);
+  fill(100, 50, 0);
+  beginShape();//cone of pencil
+    vertex(xcord + 200, ycord + 150);
+    vertex(xcord + 224, ycord + 160);
+    vertex(xcord + 222, ycord + 166);
+    vertex(xcord + 217, ycord + 170);
+    vertex(xcord + 212, ycord + 172);
+    vertex(xcord + 200, ycord + 150);
+  endShape();
+  fill(255, 255, 0);
+  beginShape();//middle of pencil
+    vertex(xcord + 224, ycord + 160);
+    vertex(xcord + 313, ycord + 270);
+    vertex(xcord + 300, ycord + 280);
+    vertex(xcord + 212, ycord + 172);
+    vertex(xcord + 217, ycord + 170);
+    vertex(xcord + 222, ycord + 166);
+    vertex(xcord + 224, ycord + 160);
+  endShape();
+  fill(255, 0, 0);
+  beginShape();//pencil eraser
+    vertex(xcord + 313, ycord + 270);
+    vertex(xcord + 322, ycord + 281);
+    vertex(xcord + 309, ycord + 290);
+    vertex(xcord + 300, ycord + 280);
+    vertex(xcord + 313, ycord + 270);
+  endShape();
+  fill(0, 0, 0);
+  beginShape();//pencil lead
+    vertex(xcord + 200, ycord + 150);
+    vertex(xcord + 210, ycord + 154);
+    vertex(xcord + 206, ycord + 159);
+    vertex(xcord + 200, ycord + 150);
+  endShape();
+  line(xcord + 217, ycord + 170, xcord + 304, ycord + 277);
+  line(xcord + 221, ycord + 166, xcord + 308, ycord + 273);
+};
+var alphaorder = function(xcord, ycord) {
+  fill(255, 255, 255);
+  rect(0, 0, 400, 400)
+  strokeWeight(2);
+  textFont(4,(25));
+  fill(50, 50, 255);
+  rect(xcord + 65,  ycord + 270, 50, 50, 3);//A
+  rect(xcord + 150, ycord + 110, 50, 50, 3);//B
+  rect(xcord + 200, ycord + 110, 50, 50, 3);//C
+  rect(xcord + 250, ycord + 110, 50, 50, 3);//D
+  rect(xcord + 230, ycord + 50,  50, 50, 3);//E
+  rect(xcord + 175, ycord + 200, 50, 50, 3);//F
+  rect(xcord + 299, ycord + 250, 50, 50, 3);//G
+  rect(xcord + 20,  ycord + 130, 50, 50, 3);//H
+  rect(xcord + 210, ycord + 340, 50, 50, 3);//I
+  rect(xcord + 60,  ycord + 20,  50, 50, 3);//J
+  fill(0, 0, 0);
+  text("A",xcord + 80,  ycord + 305, 6);
+  text("B",xcord + 165, ycord + 145, 6);
+  text("C",xcord + 215, ycord + 145, 6);
+  text("D",xcord + 265, ycord + 145, 6);
+  text("E",xcord + 245, ycord + 85,  6);
+  text("F",xcord + 190, ycord + 235, 6);
+  text("G",xcord + 314, ycord + 285, 6);
+  text("H",xcord + 35,  ycord + 165, 6);
+  text("I",xcord + 230, ycord + 375, 6);
+  text("J",xcord + 75,  ycord + 55,  6);
+};
+var numorder = function(xcord, ycord) {
+  fill(0, 0, 0);
+  rect(0, 0, 400, 400);
+  fill(100, 0, 100);
+  ellipse(xcord +  30, ycord + 30,  40, 40);//1
+  ellipse(xcord + 230, ycord + 100, 40, 40);//2
+  ellipse(xcord + 150, ycord + 270, 40, 40);//3
+  ellipse(xcord + 120, ycord + 370, 40, 40);//4
+  ellipse(xcord + 310, ycord + 280, 40, 40);//5
+  ellipse(xcord + 190, ycord + 210, 40, 40);//6
+  ellipse(xcord + 340, ycord + 150, 40, 40);//7
+  ellipse(xcord + 110, ycord + 140, 40, 40);//8
+  ellipse(xcord +  50, ycord + 310, 40, 40);//9
+  fill(0, 0, 0);
+  textFont(4,(20));
+  text("1",xcord +  25, ycord +  35);
+  text("2",xcord + 225, ycord + 105);
+  text("3",xcord + 145, ycord + 275);
+  text("4",xcord + 115, ycord + 375);
+  text("5",xcord + 305, ycord + 285);
+  text("6",xcord + 185, ycord + 215);
+  text("7",xcord + 335, ycord + 155);
+  text("8",xcord + 105, ycord + 145);
+  text("9",xcord +  45, ycord + 315);
+};
+void draw(){
+  background(255, 255, 255);
+  stroke(0, 0, 0);
+  numtrace(0, 0);
+  //alphaorder(0, 0);
+  //numorder(0, 0);
+};
