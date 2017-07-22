@@ -2,9 +2,53 @@
 <head>
   <script src="processing.js"></script>
   <link  rel="stylesheet" src="style.css"></link>
-  <link rel="icon" href="numberblastlink.png"><link>
-  <title>Number Blast</title>
+  <link rel="icon" href="numberblasticon.png"><link>
+  <title>Alphabet Ordering</title>
+  <style>
+    body{
+      background-color: darkblue;
+      width:100%;
+      text-align: center;
+    }
+    div{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      height:100%;
+
+    }
+    a{
+      text-decoration: none;
+
+
+    }
+    #games {
+      font-size:100px;
+      color:red;
+      text-shadow:4px 4px 1px black;
+
+    }
+    #four {
+      font-size:100px;
+      color:green;
+      text-shadow:4px 4px 1px black;
+    }
+    #kids {
+      font-size:100px;
+      color:blue;
+      text-shadow:4px 4px 1px black
+    }
+  </style>
 </head>
   <body>
-  <canvas data-processing-sources="numberblast.pde"></canvas>
+    <a href="Main.html">
+      <span id="games">Games</span>
+    <span id="four">4</span>
+    <span id="kids">Kids</span>
+  </a>
+  <div>
+    <canvas data-processing-sources="numberblast.pde"></canvas>
+  </div>
+  </body>
+  
 </html>
