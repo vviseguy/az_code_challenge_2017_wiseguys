@@ -9,7 +9,7 @@ var ParX = [0];
 var ParY = [];
 var ParV = [];
 var ParR = [];
-var Char = 10;
+var Char = 1;
 var RotG = 0;
 var VA = [];
 var VB = [];
@@ -175,9 +175,25 @@ draw = function() {
     if(Char===10){
       Tra(50,50,1);
       Tra(50,350,2);
+      Tra(250+cos(0)*100,200+sin(0)*160,3);
+      Tra(250+cos(0.5)*100,200+sin(0.5)*160,4);
+      Tra(250+cos(1)*100,200+sin(1)*160,5);
+      Tra(250+cos(1.5)*100,200+sin(1.5)*160,6);
+      Tra(250+cos(2)*100,200+sin(2)*160,7);
+      Tra(250+cos(2.5)*100,200+sin(2.5)*160,8);
+      Tra(250+cos(3)*100,200+sin(3)*160,9);
+      Tra(250+cos(3.5)*100,200+sin(3.5)*160,10);
+      Tra(250+cos(4)*100,200+sin(4)*160,11);
+      Tra(250+cos(4.5)*100,200+sin(4.5)*160,12);
+      Tra(250+cos(5)*100,200+sin(5)*160,13);
+      Tra(250+cos(5.5)*100,200+sin(5.5)*160,14);
+      Tra(250+cos(5.9)*100,200+sin(5.9)*160,15);
+      Tra(250+cos(0)*100,200+sin(0)*160,16);
     }
+  if(Char>10){GameOver();}
   if(ParX[0]!==0){
     for(var i=0; i<15; i++){
+      noStroke();
       pushMatrix();
       translate(ParX[i],ParY[i]);
       rotate(ParR[i]);
@@ -186,12 +202,21 @@ draw = function() {
       popMatrix();
       ParR[i]+=0.1+ParV[i]/50;
       ParY[i]+=ParV[i];
+    if(Char>10){
+      if(ParY[i]>450){
+        ParY[i]=random(-20,-300);
+        ParX[i]=random(20,380);
+        ParV[i]=random(3,5);
+        ParR[i]=random(1,90);
+      }
+    }else{
       if(ParY[i]>1000){
         ParX=[0];
         ParY=[];
         ParV=[];
         ParR=[];
       }
+    }
     }
   }
     stroke(0,0,0);
@@ -206,13 +231,13 @@ draw = function() {
     endShape();
     if(Char===10){
       if(V1>1){line(50,50,50,350);}
+      if(V1===1){line(mouseX*400/Size,mouseY*400/Size,50,50);}
       beginShape();
       for(var i=2; i<VA.length; i++){
         vertex(VA[i],VB[i]);
       }
+      if(Done===false&&V1>2){vertex(mouseX*400/Size,mouseY*400/Size);}
       endShape();
     }
     popMatrix();
-    fill(0,0,0);
-    //text(VA[0],200,200);
 };
