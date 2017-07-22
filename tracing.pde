@@ -1,4 +1,4 @@
-var Size = 800;
+var Size = 700;
 void setup(){
   size(Size,Size);
 }
@@ -28,7 +28,7 @@ mouseClicked = function(){
   }
 };
 var GameOver = function(A,B){
-  background(255,255,255);
+  noStroke();
   pushMatrix();
   scale(Size/400,Size/400);
   translate(200,200);
@@ -68,7 +68,7 @@ draw = function() {
     scale(Size/400,Size/400);
     textSize(20);
     fill(0,0,0);
-    text(Char,20,25);
+    text(Char>10?"":Char,20,25);
     if(Char===1){
       Tra(100,350,4);
       Tra(300,350,5);
@@ -190,7 +190,6 @@ draw = function() {
       Tra(250+cos(5.9)*100,200+sin(5.9)*160,15);
       Tra(250+cos(0)*100,200+sin(0)*160,16);
     }
-  if(Char>10){GameOver();}
   if(ParX[0]!==0){
     for(var i=0; i<15; i++){
       noStroke();
@@ -239,5 +238,7 @@ draw = function() {
       if(Done===false&&V1>2){vertex(mouseX*400/Size,mouseY*400/Size);}
       endShape();
     }
+
     popMatrix();
+    if(Char>10){GameOver();}
 };
