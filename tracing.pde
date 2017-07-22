@@ -1,4 +1,4 @@
-var Size = 400;
+var Size = 800;
 void setup(){
   size(Size,Size);
 }

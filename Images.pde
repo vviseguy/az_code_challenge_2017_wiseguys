@@ -57,48 +57,49 @@ var tracedots = function(xcord, ycord) {
   line(xcord + 221,ycord + 166,xcord + 308,ycord + 273);
 };
 var alphaorder = function(xcord, ycord) {
+  background(100,100,170);
   strokeWeight(2);
   textFont(4,(25))
-  fill(50, 50, 255);
+  fill(200, 200, 255);
   rect(xcord + 65, ycord + 270, 50, 50, 3);//A
   fill(0, 0, 0);
-  text("A",xcord + 80,ycord + 305, 6);
-  fill(50, 50, 255);
+  text("1",xcord + 80,ycord + 305, 6);
+  fill(200, 200, 255);
   rect(xcord + 150, ycord + 110, 50, 50, 3);//B
   fill(0, 0, 0);
-  text("B",xcord + 165,ycord + 145, 6);
-  fill(50, 50, 255);
+  text("2",xcord + 165,ycord + 145, 6);
+  fill(200, 200, 255);
   rect(xcord + 200, ycord + 110, 50, 50, 3);//C
   fill(0, 0, 0);
-  text("C",xcord + 215,ycord + 145, 6);
-  fill(50, 50, 255);
+  text("3",xcord + 215,ycord + 145, 6);
+  fill(200, 200, 255);
   rect(xcord + 250, ycord + 110, 50, 50, 3);//D
   fill(0, 0, 0);
-  text("D",xcord + 265,ycord + 145, 6);
-  fill(50, 50, 255);
+  text("4",xcord + 265,ycord + 145, 6);
+  fill(200, 200, 255);
   rect(xcord + 230, ycord + 50, 50, 50, 3);//E
   fill(0, 0, 0);
-  text("E",xcord + 245,ycord + 85, 6);
-  fill(50, 50, 255);
+  text("5",xcord + 245,ycord + 85, 6);
+  fill(200, 200, 255);
   rect(xcord + 175, ycord + 200, 50, 50, 3);//F
   fill(0, 0, 0);
-  text("F",xcord + 190,ycord + 235, 6);
-  fill(50, 50, 255);
+  text("6",xcord + 190,ycord + 235, 6);
+  fill(200, 200, 255);
   rect(xcord + 299, ycord + 250, 50, 50, 3);//G
   fill(0, 0, 0);
-  text("G",xcord + 314,ycord + 285, 6);
-  fill(50, 50, 255);
+  text("7",xcord + 314,ycord + 285, 6);
+  fill(200, 200, 255);
   rect(xcord + 20, ycord + 130, 50, 50, 3);//H
   fill(0, 0, 0);
-  text("H",xcord + 35,ycord + 165, 6);
-  fill(50, 50, 255);
+  text("8",xcord + 35,ycord + 165, 6);
+  fill(200, 200, 255);
   rect(xcord + 210, ycord + 340, 50, 50, 3);//I
   fill(0, 0, 0);
-  text("I",xcord + 230,ycord + 375, 6);
-  fill(50, 50, 255);
+  text("9",xcord + 230,ycord + 375, 6);
+  fill(200, 200, 255);
   rect(xcord + 60, ycord + 20, 50, 50, 3);//J
   fill(0, 0, 0);
-  text("J",xcord + 75,ycord + 55, 6);
+  text("0",xcord + 75,ycord + 55, 6);
 
 };
 void draw(){
